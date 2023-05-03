@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% for note in notes %}
+    <div class="card">
+        <h5 class="card-header">{{ note.title }}</h5>
+        <div class="card-body">
+        <h5 class="card-title">Week {{ note.week }}</h5>
+        <p class="card-text">{{ note.content }}</p>
+        </div>
+    </div>
+{%  endfor %}
+
+{% endblock %}

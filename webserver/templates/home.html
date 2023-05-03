@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="h-50 center card" style="width: 550px;">
+        <h5 class="card-header">{{ note.title }}</h5>
+        <div class="card-body">
+        <h5 class="card-title">Week {{ note.week }}</h5>
+        <p class="card-text">{{ note.content }}</p>
+        </div>
+
+        <small class="text-muted" style="margin-top: 250px;">
+            {% if amount > 1 %}
+                <a class="ml-2" href="{{ url_for('previous_notes') }}">Previous Notes</a>
+            {% endif %}
+        </small>
+
+    </div>
+
+{% endblock %}
